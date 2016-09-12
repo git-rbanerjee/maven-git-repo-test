@@ -171,4 +171,8 @@ And
 ```
 
 
+### Complete Example POM :
+
+https://github.com/git-rbanerjee/maven-git-repo-test/blob/master/maven-git-repo-test/pom.xml
+
 
