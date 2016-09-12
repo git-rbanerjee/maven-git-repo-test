@@ -120,6 +120,10 @@ Congratulations!! You can now deploy your maven artifacts to a poor man's public
 mvn clean deploy
 ```
 
+Visit github.com in your browser, select the mvn-repo branch, and verify that all your binaries are now there.
+
+https://github.com/git-rbanerjee/maven-git-repo-test/tree/mvn-repo/com/coder/maven-git-repo-test
+
 So , Now your public maven repo is ready.
 
 # Step 5:
@@ -140,5 +144,31 @@ To use the repo ,Add github as repository source. And then use your project grou
 ```
 
 # That's All !!!
+
+### To use this peoject as maven repo you can just use ,
+
+```
+    <repositories>
+		<repository>
+			<id>maven-git-repo-test</id>
+			<url>https://raw.github.com/git-rbanerjee/maven-git-repo-test/mvn-repo/</url>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+		</repository>
+	</repositories>
+```
+
+And
+
+```
+    <dependency>
+			<groupId>com.coder</groupId>
+			<artifactId>maven-git-repo-test</artifactId>
+			<version>0.0.1</version>
+	</dependency>
+```
+
 
 
